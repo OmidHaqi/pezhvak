@@ -12,6 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
+  dio: ^5.4.3+1
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  blurbox: ^0.0.3
 
 dev_dependencies:
   flutter_test:
@@ -31,8 +35,8 @@ flutter:
         - asset: assets/fonts/Poppins-LightItalic.ttf
           style: italic
 
-  #   - family: Trajan Pro
+  #   - family: Example
   #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  #       - asset: assets/fonts/
+  #       - asset: assets/fonts/
+  #         
