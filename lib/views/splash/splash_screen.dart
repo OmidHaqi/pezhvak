@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:pezhvak/resources/widgets.dart';
 import 'package:pezhvak/responsive.dart';
 import 'package:pezhvak/routes/named_route.dart';
 import 'package:pezhvak/views/splash/splash_desktop.dart';
@@ -15,10 +15,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-    @override
+  @override
   void initState() {
     Future.delayed(const Duration(seconds: 3)).then((value) {
-      
       Get.offAndToNamed(NamedRoute.homePage);
     });
     super.initState();
@@ -28,16 +27,18 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: LayoutBuilder(
-            builder: (BuildContext context, BoxConstraints constraints) {
-          if (Responsive.isDesktop(context)) {
-            return SplashDesktop();
-          } else if (Responsive.isTablet(context)) {
-            return SplashTablet();
-          } else {
-            return SplashMobile();
-          }
-        }),
+        body: Background(
+          child: LayoutBuilder(
+              builder: (BuildContext context, BoxConstraints constraints) {
+            if (Responsive.isDesktop(context)) {
+              return SplashDesktop();
+            } else if (Responsive.isTablet(context)) {
+              return SplashTablet();
+            } else {
+              return SplashMobile();
+            }
+          }),
+        ),
       ),
     );
   }
