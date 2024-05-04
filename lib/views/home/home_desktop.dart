@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Desktop extends StatelessWidget {
-  const Desktop({
+class HomeDesktop extends StatelessWidget {
+  const HomeDesktop({
     super.key,
   });
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Tablet extends StatelessWidget {
-  const Tablet({
+class HomeMobile extends StatelessWidget {
+  const HomeMobile({
     super.key,
   });
 
@@ -9,7 +9,7 @@ class Tablet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Text(
-       "pezhvak is Tablet layout",
+        "pezhvak is Mobile layout ",
       ),
     );
   }

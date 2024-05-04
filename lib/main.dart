@@ -7,17 +7,19 @@ import 'package:pezhvak/routes/named_route.dart';
 import 'package:pezhvak/routes/pages.dart';
 
 void main() {
+  //X509 Certificate
   HttpOverrides.global = MyHttpOverrides();
-
-
   runApp(const MyApp());
 }
+
+
+
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
     return GetMaterialApp(
       title: 'Pezhvak',
       locale: const Locale('fa'),
