@@ -13,7 +13,7 @@ class SplashMobile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset(
-            Paths.splashLogo,
+            Paths.splashLogoPng,
             width: 250,
           )
               .animate(

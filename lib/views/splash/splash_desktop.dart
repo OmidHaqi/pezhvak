@@ -1,4 +1,5 @@
 
+import 'package:blurbox/blurbox.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:pezhvak/resources/constants/paths.dart';
@@ -16,7 +17,7 @@ class SplashDesktop extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
         Image.asset(
-            Paths.splashLogo,
+            Paths.splashLogoPng,
             width: 250,
           )
               .animate(
@@ -32,7 +33,7 @@ class SplashDesktop extends StatelessWidget {
                 duration: 2000.ms,
               )
               .fade(begin: 0.5),
-           Text('گروه توسعه و نرم افزار پژواک',style: TextStyle(fontSize: 32),)
+           BlurBox(child: Text('گروه توسعه و نرم افزار پژواک',style: TextStyle(fontSize: 32),))
         
         
       ],),
