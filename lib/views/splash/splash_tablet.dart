@@ -1,3 +1,4 @@
+import 'package:blurbox/blurbox.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:pezhvak/resources/constants/paths.dart';
@@ -30,7 +31,12 @@ class SplashTablet extends StatelessWidget {
               )
               .fade(begin: 0.5),
 
-           Text('گروه توسعه و نرم افزار پژواک',style: TextStyle(fontSize: 26),)
+           const BlurBox(
+            child: Text(
+              'گروه توسعه و نرم افزار پژواک',
+              style: TextStyle(fontSize: 32),
+            ),
+          )
         
         
       ],),
