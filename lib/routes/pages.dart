@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:pezhvak/routes/binding.dart';
 import 'package:pezhvak/views/home/home_page.dart';
 
 import '../routes/named_route.dart';
@@ -11,6 +12,7 @@ class Pages {
     GetPage(
       name: NamedRoute.initialRoute,
       page: () => const SplashScreen(),
+      binding: SplashBinding()
     ),
     GetPage(
       transition: Transition.fade,

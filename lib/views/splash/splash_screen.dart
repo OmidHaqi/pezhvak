@@ -1,33 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pezhvak/resources/widgets.dart';
+import 'package:pezhvak/resources/constants/paths.dart';
 import 'package:pezhvak/responsive.dart';
-import 'package:pezhvak/routes/named_route.dart';
 import 'package:pezhvak/views/splash/splash_desktop.dart';
 import 'package:pezhvak/views/splash/splash_mobile.dart';
 import 'package:pezhvak/views/splash/splash_tablet.dart';
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    Future.delayed(const Duration(seconds: 3)).then((value) {
-      Get.offAndToNamed(NamedRoute.homePage);
-    });
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Background(
+        body: DecoratedBox(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(Paths.bgPng),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
             if (Responsive.isDesktop(context)) {
