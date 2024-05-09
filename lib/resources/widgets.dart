@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:pezhvak/resources/constants/paths.dart';
 
 class Background extends StatelessWidget {
@@ -7,14 +8,19 @@ class Background extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(Paths.bgPng),
-          fit: BoxFit.cover,
+    return Stack(
+      fit: StackFit.expand,
+      children: [
+        DecoratedBox(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(Paths.bgPng),
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
-      ),
-      child: child,
+        child
+      ],
     );
   }
 }
