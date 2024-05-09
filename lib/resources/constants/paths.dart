@@ -17,4 +17,5 @@ class Paths {
   static String vcPluse= 'assets/svg/vc_plus.svg';
   static String vcTriangle= 'assets/svg/vc_triangle.svg';
   static String vcVector= 'assets/svg/vc_vector.svg';
+  static String animationPng= 'assets/images/animtions.png';
 }
