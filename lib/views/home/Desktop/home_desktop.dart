@@ -1,7 +1,5 @@
 import 'package:blurbox/blurbox.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:pezhvak/resources/constants/paths.dart';
@@ -12,7 +10,7 @@ class HomeDesktop extends StatelessWidget {
   HomeDesktop({super.key, required this.size});
   final Size size;
   final RxInt selectedPageIndex = 0.obs;
-  
+
   changeScreen(int value) {
     selectedPageIndex.value = value;
   }
