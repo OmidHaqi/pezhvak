@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:pezhvak/resources/constants/paths.dart';
 
 class Background extends StatelessWidget {
-  Background({required this.child, super.key});
+  const Background({required this.child, super.key});
   final Widget child;
 
   @override
