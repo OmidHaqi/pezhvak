@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:pezhvak/resources/constants/paths.dart';
 import 'package:pezhvak/responsive.dart';
 import 'package:pezhvak/views/splash/splash_desktop.dart';
@@ -8,7 +7,6 @@ import 'package:pezhvak/views/splash/splash_tablet.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,11 +21,11 @@ class SplashScreen extends StatelessWidget {
           child: LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
             if (Responsive.isDesktop(context)) {
-              return SplashDesktop();
+              return const SplashDesktop();
             } else if (Responsive.isTablet(context)) {
-              return SplashTablet();
+              return const SplashTablet();
             } else {
-              return SplashMobile();
+              return const SplashMobile();
             }
           }),
         ),
